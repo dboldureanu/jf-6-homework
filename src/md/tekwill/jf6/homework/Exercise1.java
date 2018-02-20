@@ -48,7 +48,7 @@ public class Exercise1 {
         Player{name='John', age=17, points=200}
         * */
         for(Player player : players) {
-
+            System.out.println("Player{name='" + player.name+"', age="+player.age+", points="+player.points+"}");
         }
     }
 }
