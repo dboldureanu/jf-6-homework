@@ -1,11 +1,26 @@
 package md.tekwill.jf6.homework;
 
+import java.util.Arrays;
+
 public class Exercise2 {
 
-    static class Player {
+    static class Player implements Comparable<Player> {
         String name;
         int age;
         int points;
+
+        @Override
+        public String toString() {
+            return "Player{" +
+                    "name='" + name + '\'' +
+                    ", age=" + age +
+                    '}';
+        }
+
+        @Override
+        public int compareTo(Player o) {
+            return Integer.compare(points, o.points);
+        }
     }
 
 
@@ -42,7 +57,8 @@ public class Exercise2 {
         players[4].age = 19;
         players[4].points = 270;
 
-
+        Arrays.sort(players);
+        System.out.println(players[4]);
         /*
         Print the winner's name and age. More points the better.
         * */

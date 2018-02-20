@@ -5,6 +5,16 @@ public class Exercise1 {
     static class Player {
         String name;
         int age;
+
+        @Override
+        public String toString() {
+            return "Player{" +
+                    "name='" + name + '\'' +
+                    ", age=" + age +
+                    ", points=" + points +
+                    '}';
+        }
+
         int points;
     }
 
@@ -47,8 +57,8 @@ public class Exercise1 {
         Print all players, one on every line in the following format:
         Player{name='John', age=17, points=200}
         * */
-        for(Player player : players) {
-            // Write Your Code Here
-        }
+        for(Player player : players)
+            System.out.println(player);
+
     }
 }

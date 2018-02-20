@@ -51,7 +51,7 @@ public class Exercise5 {
         Write code that will make all players to say hello
         * */
         for (Player player : players) {
-            // Write Your Code Here
+            player.sayHello();
         }
     }
 }

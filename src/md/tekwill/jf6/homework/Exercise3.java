@@ -5,9 +5,16 @@ public class Exercise3 {
     static class Player {
         String name;
         int age;
+
+        public int getAge() {
+            return age;
+        }
+
         int points;
     }
 
+    static double avgAge;
+    static double sumAge;
 
     public static void main(String[] args) {
         Player[] players = new Player[5];
@@ -41,6 +48,13 @@ public class Exercise3 {
         players[4].name = "Igor";
         players[4].age = 19;
         players[4].points = 270;
+
+        for (Player player:players)
+            sumAge += player.getAge();
+
+        avgAge = sumAge / players.length;
+
+        System.out.println("The average age of the players is :" + avgAge);
 
 
         /*

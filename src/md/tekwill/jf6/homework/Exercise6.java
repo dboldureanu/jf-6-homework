@@ -1,11 +1,26 @@
 package md.tekwill.jf6.homework;
 
+import java.util.Random;
+
 public class Exercise6 {
 
     static class Player {
         String name;
         int age;
         int points;
+
+        @Override
+        public String toString() {
+            return "Player{" +
+                    "name='" + name + '\'' +
+                    ", age=" + age +
+                    ", points=" + points +
+                    '}';
+        }
+
+        public void setPoints(int points) {
+            this.points = points;
+        }
 
         public void sayHello() {
             System.out.println("Hello, my name is " + name);
@@ -14,6 +29,10 @@ public class Exercise6 {
 
 
     public static void main(String[] args) {
+
+        Random rand = new Random();
+        int  newPoints = rand.nextInt(300) + 1;
+
         Player[] players = new Player[5];
 
         // Adding John
@@ -46,7 +65,18 @@ public class Exercise6 {
         players[4].age = 19;
         players[4].points = 270;
 
+        players[0].setPoints(255);
+        for(Player player : players)
+        {
+            System.out.println(player);
+            player.setPoints(newPoints);
+            newPoints = rand.nextInt(300) + 1;
+        }
 
+        System.out.println("\nNew values\n");
+
+        for(Player player : players)
+            System.out.println(player);
         /*
         Implement setPoints method that will update player points field value
         * */
