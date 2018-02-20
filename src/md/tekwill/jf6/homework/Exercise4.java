@@ -1,11 +1,17 @@
 package md.tekwill.jf6.homework;
 
+import java.util.Arrays;
+
 public class Exercise4 {
 
     static class Player {
         String name;
         int age;
         int points;
+
+        public int getPoints() {
+            return points;
+        }
     }
 
 
@@ -42,10 +48,10 @@ public class Exercise4 {
         players[4].age = 19;
         players[4].points = 270;
 
+        int sum = Arrays.stream(players)
+                .mapToInt(Player::getPoints)
+                .sum();
 
-        /*
-        Print the sum of all player's points
-        * */
-        // Write your code here
+        System.out.println("Sum = " + sum);
     }
 }
