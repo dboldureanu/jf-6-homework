@@ -50,8 +50,10 @@ public class Exercise5 {
         /*
         Write code that will make all players to say hello
         * */
+        int i=0;
         for (Player player : players) {
-            // Write Your Code Here
+            System.out.println(players[i].name+" say Hello");
+            i=++i;
         }
     }
 }
