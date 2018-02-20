@@ -46,6 +46,11 @@ public class Exercise3 {
         /*
         Print the average age of the players.
         * */
-        // Write your code here
+        int age=0;
+        int pers=5;
+        for(int i=0;i<5;i++){
+            age=players[i].age+age;
+        }
+        System.out.println("Average age is: "+age/pers);
     }
 }

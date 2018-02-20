@@ -6,10 +6,13 @@ public class Exercise6 {
         String name;
         int age;
         int points;
+        int ar;
+        int point;
 
         public void sayHello() {
             System.out.println("Hello, my name is " + name);
         }
+
     }
 
 
@@ -50,6 +53,12 @@ public class Exercise6 {
         /*
         Implement setPoints method that will update player points field value
         * */
-        //players[0].setPoints(200);
+        for (int i = 0; i < 5; i++) {
+            players[i].points=200;
+            //cu setPoints(200) - nu stiu cum
+            System.out.println("Player "+i+" points: "+players[i].points);
+        }
+
     }
+
 }
