@@ -47,11 +47,8 @@ public class Exercise5 {
         players[4].points = 270;
 
 
-        /*
-        Write code that will make all players to say hello
-        * */
         for (Player player : players) {
-            // Write Your Code Here
+            player.sayHello();
         }
     }
 }

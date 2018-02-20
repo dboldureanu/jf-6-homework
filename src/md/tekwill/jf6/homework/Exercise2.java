@@ -1,11 +1,20 @@
 package md.tekwill.jf6.homework;
 
+import javax.jws.soap.SOAPBinding;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Optional;
+
 public class Exercise2 {
 
     static class Player {
         String name;
         int age;
         int points;
+
+        public int getPoints() {
+            return points;
+        }
     }
 
 
@@ -42,10 +51,12 @@ public class Exercise2 {
         players[4].age = 19;
         players[4].points = 270;
 
+        // print the winner
 
-        /*
-        Print the winner's name and age. More points the better.
-        * */
-        // Write your code here
+        Player winner = Arrays.stream(players)
+                .max(Comparator.comparingInt(Player::getPoints))
+                .get();
+
+        System.out.println("Winner is " + winner.name + ", with " + winner.points + " points.");
     }
 }

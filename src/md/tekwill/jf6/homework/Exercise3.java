@@ -1,11 +1,18 @@
 package md.tekwill.jf6.homework;
 
+import java.util.Arrays;
+import java.util.IntSummaryStatistics;
+
 public class Exercise3 {
 
     static class Player {
         String name;
         int age;
         int points;
+
+        public int getAge() {
+            return age;
+        }
     }
 
 
@@ -42,10 +49,10 @@ public class Exercise3 {
         players[4].age = 19;
         players[4].points = 270;
 
+        IntSummaryStatistics statistics = Arrays.stream(players)
+                .mapToInt(Player::getAge)
+                .summaryStatistics();
 
-        /*
-        Print the average age of the players.
-        * */
-        // Write your code here
+        System.out.println("Average = " + statistics.getAverage());
     }
 }
