@@ -42,10 +42,22 @@ public class Exercise2 {
         players[4].age = 19;
         players[4].points = 270;
 
+        int maxPoints = 0, betterPoint;
+        String winnerPlayer = "winnerPlayer";
+        int winnerAge = 0;
 
-        /*
+
+        for(int p = 0; p < players.length; p++) {
+            betterPoint = players[p].points;
+                maxPoints = betterPoint;
+                winnerPlayer = players[p].name;
+                winnerAge = players[p].age;
+        }
+            /*
         Print the winner's name and age. More points the better.
-        * */
-        // Write your code here
+        */
+        System.out.println("The winner is: " + winnerPlayer +", "+ winnerAge + " years oid, with "+ maxPoints+ " points");
+
+
     }
 }
