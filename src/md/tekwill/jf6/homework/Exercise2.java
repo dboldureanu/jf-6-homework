@@ -6,8 +6,9 @@ public class Exercise2 {
         String name;
         int age;
         int points;
-    }
-
+        
+      
+   }  
 
     public static void main(String[] args) {
         Player[] players = new Player[5];
@@ -45,7 +46,22 @@ public class Exercise2 {
 
         /*
         Print the winner's name and age. More points the better.
-        * */
-        // Write your code here
+        * 
+        */ 
+        int win_points = players[0].points; 
+        String win_name = players[0].name;
+        for(int i=0; i<players.length; i++){ 
+        if(players[i].points > win_points){ 
+        
+        win_points = players[i].points; 
+        win_name = players[i].name;
+            }
+        }
+      
+                            
+        System.out.println("Winner is " +  win_name  + ", with " + win_points + " points.");
+
+                
     }
+
 }
