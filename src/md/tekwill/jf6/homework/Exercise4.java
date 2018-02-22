@@ -6,6 +6,10 @@ public class Exercise4 {
         String name;
         int age;
         int points;
+
+        public int getPoints(){
+            return points;
+        }
     }
 
 
@@ -42,7 +46,11 @@ public class Exercise4 {
         players[4].age = 19;
         players[4].points = 270;
 
-
+        int sumOfPoints = 0;
+        for(Player all:players){
+            sumOfPoints += all.getPoints();
+        }
+        System.out.println("The sum of all player's points are: " + sumOfPoints);
         /*
         Print the sum of all player's points
         * */

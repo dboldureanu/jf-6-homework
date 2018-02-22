@@ -10,6 +10,10 @@ public class Exercise6 {
         public void sayHello() {
             System.out.println("Hello, my name is " + name);
         }
+
+         public void setPoints(int points) {
+            this.points = points;
+        }
     }
 
 
@@ -50,6 +54,8 @@ public class Exercise6 {
         /*
         Implement setPoints method that will update player points field value
         * */
-        //players[0].setPoints(200);
+        players[0].setPoints(200);
+        System.out.println(players[0].points);
     }
+
 }

@@ -6,10 +6,13 @@ public class Exercise5 {
         String name;
         int age;
         int points;
+        String sayHello;
 
         public void sayHello() {
             System.out.println("Hello, my name is " + name);
         }
+
+
     }
 
 
@@ -50,8 +53,8 @@ public class Exercise5 {
         /*
         Write code that will make all players to say hello
         * */
-        for (Player player : players) {
-            // Write Your Code Here
+        for (Player speech : players) {
+            speech.sayHello();
         }
     }
 }
